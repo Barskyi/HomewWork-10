@@ -65,20 +65,3 @@ class AddressBook(UserDict):
     def delete(self, name):
         if name in self.data:
             del self.data[name]
-
-
-if __name__ == "__main__":
-    address_book = AddressBook()
-    record1 = Record("John")
-    record1.add_phone("1234567890")
-    record1.add_phone("0987654321")
-    address_book.add_record(record1)
-
-    record2 = Record("Alice")
-    record2.add_phone("9876543210")
-    address_book.add_record(record2)
-
-    print(record1.find_phone("1234567890"))
-    print(record1.find_phone("0987654321"))
-
-    print(address_book.find("John"))
